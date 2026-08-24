@@ -154,5 +154,8 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
     hl.exec_cmd("sleep 5 && killall .waybar-wrapped && sleep 2 && waybar")
-    hl.exec_cmd("hyprpaper")
+    -- hl.exec_cmd("hyprpaper")
+    hl.exec_cmd(
+        "linux-wallpaperengine --assets-dir /mnt/hdd/SteamLibrary/steamapps/common/wallpaper_engine/assets --screen-root DP-3 --bg /mnt/hdd/SteamLibrary/steamapps/workshop/content/431960/1819486343 --scaling fill"
+    )
 end)
